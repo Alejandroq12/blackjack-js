@@ -10,7 +10,8 @@ let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
 const specialCards = ['A', 'J', 'Q', 'K'];
 
-const crearDeck = () => {
+// This function creates a new deck
+const createDeck = () => {
   for (let i = 2; i <= 10; i += 1) {
     for (const tipo of tipos) {
       deck.push(`${i}${tipo}`);
@@ -22,9 +23,21 @@ const crearDeck = () => {
       deck.push(`${special}${tipo}`);
     }
   }
-  console.log(deck);
   deck = _.shuffle(deck);
   console.log(deck);
 };
 
-crearDeck();
+createDeck();
+
+// This function allows me to take a card
+const getCard = () => {
+  if (deck.length === 0) {
+    throw new Error('No hay cartas en el deck');
+  }
+  const card = deck.pop();
+  console.log(card);
+  console.log(deck);
+  return '2C';
+};
+
+getCard();

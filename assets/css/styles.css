@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   background-color: #2f4f30;
   color: white;
 }
@@ -17,4 +18,16 @@ html, body {
   color: white;
   padding: 20px;
   font-size: 25px;
+}
+
+.card {
+  position: relative;
+  width: 150px;
+  left: 100px;
+  margin-left: -75px;
+}
+
+#computer-cards,
+#player-cards {
+  height: 240px;
 }

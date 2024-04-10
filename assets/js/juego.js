@@ -1,3 +1,5 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable no-restricted-globals */
 /* eslint-disable no-restricted-syntax */
 /**
  * 2C = Two of Clubs
@@ -24,7 +26,6 @@ const createDeck = () => {
     }
   }
   deck = _.shuffle(deck);
-  console.log(deck);
 };
 
 createDeck();
@@ -35,9 +36,15 @@ const getCard = () => {
     throw new Error('No hay cartas en el deck');
   }
   const card = deck.pop();
-  console.log(card);
-  console.log(deck);
-  return '2C';
+  return card;
 };
 
-getCard();
+const cardValue = (card) => {
+  const value = card.substring(0, card.length - 1);
+  return (isNaN(value))
+    ? (value === 'A') ? 11 : 10
+    : value * 1;
+};
+
+const value = cardValue(getCard());
+console.log(value);

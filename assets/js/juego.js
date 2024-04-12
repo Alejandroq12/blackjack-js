@@ -8,9 +8,15 @@
  * 2S = Two of Spades
  */
 
+// HTML references
+const getCardBtn = document.querySelector('#btnGet');
+const playerPointsElements = document.querySelectorAll('small');
+
 let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
 const specialCards = ['A', 'J', 'Q', 'K'];
+let playerPoints = 0;
+let computerPoints = 0;
 
 // This function creates a new deck
 const createDeck = () => {
@@ -48,3 +54,11 @@ const cardValue = (card) => {
 
 const value = cardValue(getCard());
 console.log(value);
+
+// Events
+getCardBtn.addEventListener('click', () => {
+  const card = getCard();
+  playerPoints += cardValue(card);
+  playerPointsElements[0].innerText = playerPoints;
+  console.log(playerPoints);
+});

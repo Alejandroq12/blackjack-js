@@ -11,6 +11,7 @@
 // HTML references
 const getCardBtn = document.querySelector('#btnGet');
 const playerPointsElements = document.querySelectorAll('small');
+const divPlayerCards = document.querySelector('#player-cards');
 
 let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
@@ -60,5 +61,17 @@ getCardBtn.addEventListener('click', () => {
   const card = getCard();
   playerPoints += cardValue(card);
   playerPointsElements[0].innerText = playerPoints;
-  console.log(playerPoints);
+
+  const imgCard = document.createElement('img');
+  imgCard.src = `assets/cards/${card}.png`;
+  imgCard.classList.add('card');
+  divPlayerCards.append(imgCard);
+
+  if (playerPoints > 21) {
+    console.warn('Lo siento mucho, perdiste');
+    getCardBtn.disabled = true;
+  } else if (playerPoints === 21) {
+    console.warn('21, genial');
+    getCardBtn.disabled = true;
+  }
 });

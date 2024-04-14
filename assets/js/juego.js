@@ -10,8 +10,9 @@
 
 // HTML references
 const getCardBtn = document.querySelector('#btnGet');
-const playerPointsElements = document.querySelectorAll('small');
+const pointsElements = document.querySelectorAll('small');
 const divPlayerCards = document.querySelector('#player-cards');
+const divComputerCards = document.querySelector('#computer-cards');
 
 let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
@@ -54,15 +55,23 @@ const cardValue = (card) => {
 };
 
 // Computer turn
-const computerTurn = () => {
-
+const computerTurn = (minimumPoints) => {
+  // do {
+  const card = getCard();
+  computerPoints += cardValue(card);
+  pointsElements[1].innerText = computerPoints;
+  const imgCard = document.createElement('img');
+  imgCard.src = `assets/cards/${card}.png`;
+  imgCard.classList.add('card');
+  divComputerCards.append(imgCard);
+  // } while ();
 };
 
 // Events
 getCardBtn.addEventListener('click', () => {
   const card = getCard();
   playerPoints += cardValue(card);
-  playerPointsElements[0].innerText = playerPoints;
+  pointsElements[0].innerText = playerPoints;
 
   const imgCard = document.createElement('img');
   imgCard.src = `assets/cards/${card}.png`;

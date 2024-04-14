@@ -53,8 +53,10 @@ const cardValue = (card) => {
     : value * 1;
 };
 
-const value = cardValue(getCard());
-console.log(value);
+// Computer turn
+const computerTurn = () => {
+
+};
 
 // Events
 getCardBtn.addEventListener('click', () => {

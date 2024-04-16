@@ -84,3 +84,6 @@ getCardBtn.addEventListener('click', () => {
     getCardBtn.disabled = true;
   }
 });
+
+// TODO: Borrar
+computerTurn(12);

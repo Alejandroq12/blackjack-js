@@ -58,7 +58,7 @@ Blackjack is a project designed to simulate the classic card game against a comp
 
 ### Key Features <a name="key-features"></a>
 
-- **Able to play against the computer.**
+- **To be able to play against the computer.**
 - **Fully randomly generated cards.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

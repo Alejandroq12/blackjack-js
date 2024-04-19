@@ -195,8 +195,8 @@ You can deploy this project using GitHub pages:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **I will add a multiplayer option**
-- [ ] **I will add media queries for larger screens**
+- [ ] **I will add a multiplayer option.**
+- [ ] **I will add media queries for larger screens.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

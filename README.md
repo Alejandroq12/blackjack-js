@@ -199,6 +199,7 @@ You can deploy this project using GitHub pages:
 - [ ] **I will add a multiplayer option.**
 - [ ] **I will add media queries for larger screens.**
 - [ ] **I will optimize code.**
+- [ ] **I will deploy on GitHub pages.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

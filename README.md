@@ -187,6 +187,7 @@ You can deploy this project using GitHub pages:
 - GitHub: [Alejandroq12](https://github.com/Alejandroq12)
 - Twitter: [@JulioAle54](https://twitter.com/JulioAle54)
 - LinkedIn: [Julio Quezada](https://www.linkedin.com/in/quezadajulio/)
+- Portfolio: [Julio Quezada](https://quezadajulio.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -200,6 +200,7 @@ You can deploy this project using GitHub pages:
 - [ ] **I will add media queries for larger screens.**
 - [ ] **I will optimize code.**
 - [ ] **I will deploy on GitHub pages.**
+- [ ] **I will use modules and Vite.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

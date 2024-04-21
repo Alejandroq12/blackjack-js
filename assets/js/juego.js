@@ -54,15 +54,15 @@ const cardValue = (card) => {
 
 // Computer turn
 const computerTurn = (minimumPoints) => {
-  // do {
-  const card = getCard();
-  computerPoints += cardValue(card);
-  pointsElements[1].innerText = computerPoints;
-  const imgCard = document.createElement('img');
-  imgCard.src = `assets/cards/${card}.png`;
-  imgCard.classList.add('card');
-  divComputerCards.append(imgCard);
-  // } while ();
+  do {
+    const card = getCard();
+    computerPoints += cardValue(card);
+    pointsElements[1].innerText = computerPoints;
+    const imgCard = document.createElement('img');
+    imgCard.src = `assets/cards/${card}.png`;
+    imgCard.classList.add('card');
+    divComputerCards.append(imgCard);
+  } while ();
 };
 
 // Events

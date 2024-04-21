@@ -10,6 +10,7 @@
 
 // HTML references
 const getCardBtn = document.querySelector('#btnGet');
+const playAgainBtn = document.querySelector('#btnNew');
 const pointsElements = document.querySelectorAll('small');
 const divPlayerCards = document.querySelector('#player-cards');
 const divComputerCards = document.querySelector('#computer-cards');
@@ -66,7 +67,19 @@ const computerTurn = (minimumPoints) => {
     if (minimumPoints > 21) {
       break;
     }
-  } while ((computerPoints < minimumPoints) && (minimumPoints <= 21));
+  } while (computerPoints < minimumPoints && minimumPoints <= 21);
+
+  setTimeout(() => {
+    if (computerPoints === minimumPoints) {
+      alert("It's a tie!!!!!");
+    } else if (playerPoints > 21) {
+      alert('The computer is the winner!');
+    } else if (computerPoints > 21) {
+      alert('The player is the winner! Congratulations');
+    } else {
+      alert('The computer is the winner!');
+    }
+  }, 15);
 };
 
 // Events
@@ -97,4 +110,22 @@ stopBtn.addEventListener('click', () => {
   stopBtn.disabled = true;
   getCardBtn.disabled = true;
   computerTurn(playerPoints);
+});
+
+playAgainBtn.addEventListener('click', () => {
+  console.clear();
+  deck = [];
+  deck = createDeck();
+
+  playerPoints = 0;
+  computerPoints = 0;
+
+  pointsElements[0].innerText = 0;
+  pointsElements[1].innerText = 0;
+
+  divPlayerCards.innerHTML = '';
+  divComputerCards.innerHTML = '';
+
+  stopBtn.disabled = false;
+  getCardBtn.disabled = false;
 });

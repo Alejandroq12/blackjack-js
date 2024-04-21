@@ -62,7 +62,10 @@ const computerTurn = (minimumPoints) => {
     imgCard.src = `assets/cards/${card}.png`;
     imgCard.classList.add('card');
     divComputerCards.append(imgCard);
-  } while ();
+    if (minimumPoints > 21) {
+      break;
+    }
+  } while ((computerPoints < minimumPoints) && (minimumPoints <= 21));
 };
 
 // Events
@@ -79,11 +82,10 @@ getCardBtn.addEventListener('click', () => {
   if (playerPoints > 21) {
     console.warn('Lo siento mucho, perdiste');
     getCardBtn.disabled = true;
+    computerTurn(playerPoints);
   } else if (playerPoints === 21) {
     console.warn('21, genial');
     getCardBtn.disabled = true;
+    computerTurn(playerPoints);
   }
 });
-
-// TODO: Borrar
-computerTurn(12);

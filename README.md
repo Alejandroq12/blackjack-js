@@ -49,7 +49,7 @@ Blackjack is a project designed to simulate the classic card game against a comp
   <ul>
     <li><a href="https://developer.mozilla.org/es/docs/Learn/HTML">HTML</a></li>
     <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
   </ul>
 </details>
 
@@ -58,7 +58,7 @@ Blackjack is a project designed to simulate the classic card game against a comp
 
 ### Key Features <a name="key-features"></a>
 
-- **Able to play against the computer.**
+- **To be able to play against the computer.**
 - **Fully randomly generated cards.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -187,6 +187,7 @@ You can deploy this project using GitHub pages:
 - GitHub: [Alejandroq12](https://github.com/Alejandroq12)
 - Twitter: [@JulioAle54](https://twitter.com/JulioAle54)
 - LinkedIn: [Julio Quezada](https://www.linkedin.com/in/quezadajulio/)
+- Portfolio: [Julio Quezada](https://quezadajulio.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -195,8 +196,11 @@ You can deploy this project using GitHub pages:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **I will add a multiplayer option**
-- [ ] **I will add media queries for larger screens**
+- [ ] **I will add a multiplayer option.**
+- [ ] **I will add media queries for larger screens.**
+- [ ] **I will optimize code.**
+- [ ] **I will deploy on GitHub pages.**
+- [ ] **I will use modules and Vite.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

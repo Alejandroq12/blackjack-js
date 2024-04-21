@@ -13,6 +13,7 @@ const getCardBtn = document.querySelector('#btnGet');
 const pointsElements = document.querySelectorAll('small');
 const divPlayerCards = document.querySelector('#player-cards');
 const divComputerCards = document.querySelector('#computer-cards');
+const stopBtn = document.querySelector('#btnStop');
 
 let deck = [];
 const tipos = ['C', 'D', 'H', 'S'];
@@ -83,9 +84,17 @@ getCardBtn.addEventListener('click', () => {
     console.warn('Lo siento mucho, perdiste');
     getCardBtn.disabled = true;
     computerTurn(playerPoints);
+    stopBtn.disabled = true;
   } else if (playerPoints === 21) {
     console.warn('21, genial');
     getCardBtn.disabled = true;
+    stopBtn.disabled = true;
     computerTurn(playerPoints);
   }
+});
+
+stopBtn.addEventListener('click', () => {
+  stopBtn.disabled = true;
+  getCardBtn.disabled = true;
+  computerTurn(playerPoints);
 });

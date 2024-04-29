@@ -25,8 +25,14 @@
   const divComputerCards = document.querySelector('#computer-cards');
   const stopBtn = document.querySelector('#btnStop');
 
+  // This function initializes the game
+  const initGame = () => {
+    deck = createDeck();
+  };
+
   // This function creates a new deck
   const createDeck = () => {
+    deck = [];
     for (let i = 2; i <= 10; i += 1) {
       for (const tipo of tipos) {
         deck.push(`${i}${tipo}`);
@@ -38,19 +44,15 @@
         deck.push(`${special}${tipo}`);
       }
     }
-    deck = _.shuffle(deck);
-    return deck;
+    return _.shuffle(deck);
   };
-
-  createDeck();
 
   // This function allows me to take a card
   const getCard = () => {
     if (deck.length === 0) {
       throw new Error('No hay cartas en el deck');
     }
-    const card = deck.pop();
-    return card;
+    return deck.pop();
   };
 
   const cardValue = (card) => {

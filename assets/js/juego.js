@@ -120,8 +120,9 @@
 
   playAgainBtn.addEventListener('click', () => {
     console.clear();
-    deck = [];
-    deck = createDeck();
+    initGame();
+    // deck = [];
+    // deck = createDeck();
 
     playerPoints = 0;
     computerPoints = 0;

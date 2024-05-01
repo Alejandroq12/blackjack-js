@@ -9,7 +9,7 @@
  */
 
 (() => {
-  'use strict'
+  'use strict';
 
   let deck = [];
   const tipos = ['C', 'D', 'H', 'S'];
@@ -73,7 +73,7 @@
       if (minimumPoints > 21) {
         break;
       }
-    } while ((computerPoints < minimumPoints) && (minimumPoints <= 21));
+    } while (computerPoints < minimumPoints && minimumPoints <= 21);
 
     setTimeout(() => {
       if (computerPoints === minimumPoints) {

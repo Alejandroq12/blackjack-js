@@ -14,8 +14,9 @@
   let deck = [];
   const tipos = ['C', 'D', 'H', 'S'];
   const specialCards = ['A', 'J', 'Q', 'K'];
-  let playerPoints = 0;
-  let computerPoints = 0;
+  // let playerPoints = 0;
+  // let computerPoints = 0;
+  let playersPoints = [];
 
   // HTML references
   const getCardBtn = document.querySelector('#btnGet');
@@ -26,8 +27,11 @@
   const stopBtn = document.querySelector('#btnStop');
 
   // This function initializes the game
-  const initGame = () => {
+  const initGame = (numJugadores = 2) => {
     deck = createDeck();
+    for(let i = 0; i < numJugadores; i++){
+      playersPoints.push(0);
+    }
   };
 
   // This function creates a new deck
@@ -58,6 +62,10 @@
   const cardValue = (card) => {
     const value = card.substring(0, card.length - 1);
     return isNaN(value) ? (value === 'A' ? 11 : 10) : value * 1;
+  };
+
+  const accumulatePoints = () => {
+
   };
 
   // Computer turn

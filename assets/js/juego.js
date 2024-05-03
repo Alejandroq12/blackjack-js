@@ -64,16 +64,18 @@
     return isNaN(value) ? (value === 'A' ? 11 : 10) : value * 1;
   };
 
-  const accumulatePoints = () => {
-
+  // Turn: 0 = first player and the last one it is the computer.
+  const accumulatePoints = (card, turn) => {
+    playersPoints[turn] += cardValue(card);
+    pointsElements[turn].innerText = playersPoints[turn];
   };
 
   // Computer turn
   const computerTurn = (minimumPoints) => {
     do {
       const card = getCard();
-      computerPoints += cardValue(card);
-      pointsElements[1].innerText = computerPoints;
+      accumulatePoints(card, playersPoints.length - 1);
+
       const imgCard = document.createElement('img');
       imgCard.src = `assets/cards/${card}.png`;
       imgCard.classList.add('card');
@@ -132,8 +134,8 @@
     // deck = [];
     // deck = createDeck();
 
-    playerPoints = 0;
-    computerPoints = 0;
+    // playerPoints = 0;
+    // computerPoints = 0;
 
     pointsElements[0].innerText = 0;
     pointsElements[1].innerText = 0;

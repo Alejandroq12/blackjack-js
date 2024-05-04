@@ -101,8 +101,9 @@
   // Events
   getCardBtn.addEventListener('click', () => {
     const card = getCard();
-    playerPoints += cardValue(card);
-    pointsElements[0].innerText = playerPoints;
+    accumulatePoints(card, 0);
+    // playerPoints += cardValue(card);
+    // pointsElements[0].innerText = playerPoints;
 
     const imgCard = document.createElement('img');
     imgCard.src = `assets/cards/${card}.png`;

@@ -68,6 +68,7 @@
   const accumulatePoints = (card, turn) => {
     playersPoints[turn] += cardValue(card);
     pointsElements[turn].innerText = playersPoints[turn];
+    return pointsElements[turn];
   };
 
   // Computer turn
@@ -101,8 +102,7 @@
   // Events
   getCardBtn.addEventListener('click', () => {
     const card = getCard();
-    playerPoints += cardValue(card);
-    pointsElements[0].innerText = playerPoints;
+    const playerPoints = accumulatePoints(card, 0);
 
     const imgCard = document.createElement('img');
     imgCard.src = `assets/cards/${card}.png`;

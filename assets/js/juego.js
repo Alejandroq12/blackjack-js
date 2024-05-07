@@ -22,8 +22,7 @@
   const getCardBtn = document.querySelector('#btnGet');
   const playAgainBtn = document.querySelector('#btnNew');
   const pointsElements = document.querySelectorAll('small');
-  const divPlayerCards = document.querySelector('#player-cards');
-  const divComputerCards = document.querySelector('#computer-cards');
+  const divPlayersCards = document.querySelectorAll('.divCards');
   const stopBtn = document.querySelector('#btnStop');
 
   // This function initializes the game

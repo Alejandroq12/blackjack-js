@@ -135,13 +135,13 @@
     // playerPoints = 0;
     // computerPoints = 0;
 
-    pointsElements[0].innerText = 0;
-    pointsElements[1].innerText = 0;
+    // pointsElements[0].innerText = 0;
+    // pointsElements[1].innerText = 0;
 
-    divPlayerCards.innerHTML = '';
-    divComputerCards.innerHTML = '';
+    // divPlayerCards.innerHTML = '';
+    // divComputerCards.innerHTML = '';
 
-    stopBtn.disabled = false;
-    getCardBtn.disabled = false;
+    // stopBtn.disabled = false;
+    // getCardBtn.disabled = false;
   });
 })();

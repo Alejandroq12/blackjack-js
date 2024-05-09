@@ -76,10 +76,10 @@
       const card = getCard();
       accumulatePoints(card, playersPoints.length - 1);
 
-      const imgCard = document.createElement('img');
-      imgCard.src = `assets/cards/${card}.png`;
-      imgCard.classList.add('card');
-      divComputerCards.append(imgCard);
+      // const imgCard = document.createElement('img');
+      // imgCard.src = `assets/cards/${card}.png`;
+      // imgCard.classList.add('card');
+      // divComputerCards.append(imgCard);
       if (minimumPoints > 21) {
         break;
       }

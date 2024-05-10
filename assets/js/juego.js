@@ -70,6 +70,13 @@
     return pointsElements[turn];
   };
 
+  const createCard = (card, turn) => {
+    const imgCard = document.createElement('img');
+    imgCard.src = `assets/cards/${card}.png`;
+    imgCard.classList.add('card');
+    divPlayersCards[turn].append(imgCard)
+  };
+
   // Computer turn
   const computerTurn = (minimumPoints) => {
     do {

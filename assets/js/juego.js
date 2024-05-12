@@ -67,26 +67,23 @@
   const accumulatePoints = (card, turn) => {
     playersPoints[turn] += cardValue(card);
     pointsElements[turn].innerText = playersPoints[turn];
-    return pointsElements[turn];
+    return playersPoints[turn];
   };
 
   const createCard = (card, turn) => {
     const imgCard = document.createElement('img');
     imgCard.src = `assets/cards/${card}.png`;
     imgCard.classList.add('card');
-    divPlayersCards[turn].append(imgCard)
+    divPlayersCards[turn].append(imgCard);
   };
 
   // Computer turn
   const computerTurn = (minimumPoints) => {
+    let computerPoints = 0;
     do {
       const card = getCard();
-      accumulatePoints(card, playersPoints.length - 1);
-
-      // const imgCard = document.createElement('img');
-      // imgCard.src = `assets/cards/${card}.png`;
-      // imgCard.classList.add('card');
-      // divComputerCards.append(imgCard);
+      computerPoints = accumulatePoints(card, playersPoints.length - 1);
+      createCard(card, playersPoints.length - 1);
       if (minimumPoints > 21) {
         break;
       }
@@ -109,11 +106,7 @@
   getCardBtn.addEventListener('click', () => {
     const card = getCard();
     const playerPoints = accumulatePoints(card, 0);
-    const imgCard = document.createElement('img');
-    imgCard.src = `assets/cards/${card}.png`;
-    imgCard.classList.add('card');
-    divPlayerCards.append(imgCard);
-
+    createCard(card, 0);
     if (playerPoints > 21) {
       console.warn('Lo siento mucho, perdiste');
       getCardBtn.disabled = true;

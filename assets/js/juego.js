@@ -84,9 +84,6 @@
       const card = getCard();
       computerPoints = accumulatePoints(card, playersPoints.length - 1);
       createCard(card, playersPoints.length - 1);
-      if (minimumPoints > 21) {
-        break;
-      }
     } while (computerPoints < minimumPoints && minimumPoints <= 21);
 
     setTimeout(() => {

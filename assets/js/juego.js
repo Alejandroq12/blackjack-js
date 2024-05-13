@@ -77,15 +77,7 @@
     divPlayersCards[turn].append(imgCard);
   };
 
-  // Computer turn
-  const computerTurn = (minimumPoints) => {
-    let computerPoints = 0;
-    do {
-      const card = getCard();
-      computerPoints = accumulatePoints(card, playersPoints.length - 1);
-      createCard(card, playersPoints.length - 1);
-    } while (computerPoints < minimumPoints && minimumPoints <= 21);
-
+  const determineWinner = () => {
     setTimeout(() => {
       if (computerPoints === minimumPoints) {
         alert("It's a tie!!!!!");
@@ -97,6 +89,16 @@
         alert('The computer is the winner!');
       }
     }, 100);
+  };
+
+  // Computer turn
+  const computerTurn = (minimumPoints) => {
+    let computerPoints = 0;
+    do {
+      const card = getCard();
+      computerPoints = accumulatePoints(card, playersPoints.length - 1);
+      createCard(card, playersPoints.length - 1);
+    } while (computerPoints < minimumPoints && minimumPoints <= 21);
   };
 
   // Events

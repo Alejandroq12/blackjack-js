@@ -78,6 +78,8 @@
   };
 
   const determineWinner = () => {
+
+    const [minimumPoints, computerPoints] = playersPoints;
     setTimeout(() => {
       if (computerPoints === minimumPoints) {
         alert("It's a tie!!!!!");
@@ -99,6 +101,7 @@
       computerPoints = accumulatePoints(card, playersPoints.length - 1);
       createCard(card, playersPoints.length - 1);
     } while (computerPoints < minimumPoints && minimumPoints <= 21);
+    determineWinner();
   };
 
   // Events

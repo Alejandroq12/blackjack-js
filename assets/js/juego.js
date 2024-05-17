@@ -28,20 +28,14 @@
   // This function initializes the game
   const initGame = (numJugadores = 2) => {
     deck = createDeck();
+
+    playersPoints = [];
     for(let i = 0; i < numJugadores; i++){
       playersPoints.push(0);
     }
-    deck = [];
-    deck = createDeck();
 
-    playerPoints = 0;
-    computerPoints = 0;
-
-    pointsElements[0].innerText = 0;
-    pointsElements[1].innerText = 0;
-
-    divPlayerCards.innerHTML = '';
-    divComputerCards.innerHTML = '';
+    pointsElements.forEach((pointElement) => pointElement.innerText = 0);
+    divPlayersCards.forEach((divPlayerCardElement) => divPlayerCardElement.innerHTML = '');
 
     stopBtn.disabled = false;
     getCardBtn.disabled = false;

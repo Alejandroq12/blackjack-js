@@ -8,7 +8,7 @@
  * 2S = Two of Spades
  */
 
-(() => {
+const myModule = (() => {
   'use strict';
 
   let deck = [];
@@ -139,4 +139,8 @@
   playAgainBtn.addEventListener('click', () => {
     initGame();
   });
+
+  return {
+    newGame: initGame,
+  };
 })();

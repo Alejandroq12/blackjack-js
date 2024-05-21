@@ -133,7 +133,7 @@ const myModule = (() => {
   stopBtn.addEventListener('click', () => {
     stopBtn.disabled = true;
     getCardBtn.disabled = true;
-    computerTurn(playerPoints);
+    computerTurn(playersPoints[0]);
   });
 
   playAgainBtn.addEventListener('click', () => {

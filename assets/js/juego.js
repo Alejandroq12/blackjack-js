@@ -30,7 +30,7 @@ const myModule = (() => {
     deck = createDeck();
 
     playersPoints = [];
-    for(let i = 0; i < numJugadores; i++){
+    for (let i = 0; i < numJugadores; i += 1) {
       playersPoints.push(0);
     }
 
@@ -86,7 +86,6 @@ const myModule = (() => {
   };
 
   const determineWinner = () => {
-
     const [minimumPoints, computerPoints] = playersPoints;
     setTimeout(() => {
       if (computerPoints === minimumPoints) {

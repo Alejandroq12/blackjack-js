@@ -1,3 +1,6 @@
+import './style.css';
+import _ from  'underscore';
+
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-restricted-syntax */
@@ -143,3 +146,4 @@ const myModule = (() => {
     newGame: initGame,
   };
 })();
+

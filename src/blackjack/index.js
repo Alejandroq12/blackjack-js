@@ -1,5 +1,5 @@
 import _ from  'underscore';
-
+import { createDeck } from './usecases/crear-deck.js'
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-restricted-syntax */
@@ -29,7 +29,7 @@ const myModule = (() => {
 
   // This function initializes the game
   const initGame = (numJugadores = 2) => {
-    deck = createDeck();
+    deck = createDeck(tipos, specialCards);
 
     playersPoints = [];
     for (let i = 0; i < numJugadores; i += 1) {
@@ -41,23 +41,6 @@ const myModule = (() => {
 
     stopBtn.disabled = false;
     getCardBtn.disabled = false;
-  };
-
-  // This function creates a new deck
-  const createDeck = () => {
-    deck = [];
-    for (let i = 2; i <= 10; i += 1) {
-      for (const tipo of tipos) {
-        deck.push(`${i}${tipo}`);
-      }
-    }
-
-    for (const tipo of tipos) {
-      for (const special of specialCards) {
-        deck.push(`${special}${tipo}`);
-      }
-    }
-    return _.shuffle(deck);
   };
 
   // This function allows me to take a card

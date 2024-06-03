@@ -1,5 +1,7 @@
 import _ from  'underscore';
 import { createDeck } from './usecases/crear-deck.js'
+import { getCard } from './usecases/get-card.js';
+
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-restricted-syntax */
@@ -26,7 +28,6 @@ const myModule = (() => {
   const pointsElements = document.querySelectorAll('small');
   const divPlayersCards = document.querySelectorAll('.divCards');
   const stopBtn = document.querySelector('#btnStop');
-
   // This function initializes the game
   const initGame = (numJugadores = 2) => {
     deck = createDeck(tipos, specialCards);
@@ -41,14 +42,6 @@ const myModule = (() => {
 
     stopBtn.disabled = false;
     getCardBtn.disabled = false;
-  };
-
-  // This function allows me to take a card
-  const getCard = () => {
-    if (deck.length === 0) {
-      throw new Error('No hay cartas en el deck');
-    }
-    return deck.pop();
   };
 
   const cardValue = (card) => {
@@ -89,7 +82,7 @@ const myModule = (() => {
   const computerTurn = (minimumPoints) => {
     let computerPoints = 0;
     do {
-      const card = getCard();
+      const card = getCard(deck);
       computerPoints = accumulatePoints(card, playersPoints.length - 1);
       createCard(card, playersPoints.length - 1);
     } while (computerPoints < minimumPoints && minimumPoints <= 21);
@@ -98,7 +91,7 @@ const myModule = (() => {
 
   // Events
   getCardBtn.addEventListener('click', () => {
-    const card = getCard();
+    const card = getCard(deck);
     const playerPoints = accumulatePoints(card, 0);
     createCard(card, 0);
     if (playerPoints > 21) {

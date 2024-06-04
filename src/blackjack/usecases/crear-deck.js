@@ -22,5 +22,5 @@
         deck.push(`${special}${tipo}`);
       }
     }
-    return _.shuffle(deck);
+    return deck = _.shuffle(deck);
   };

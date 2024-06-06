@@ -1,7 +1,7 @@
 import _ from  'underscore';
 import { createDeck } from './usecases/crear-deck.js'
 import { getCard } from './usecases/get-card.js';
-
+import { cardValue } from './usecases/card-value.js';
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-restricted-syntax */
@@ -42,11 +42,6 @@ const myModule = (() => {
 
     stopBtn.disabled = false;
     getCardBtn.disabled = false;
-  };
-
-  const cardValue = (card) => {
-    const value = card.substring(0, card.length - 1);
-    return isNaN(value) ? (value === 'A' ? 11 : 10) : value * 1;
   };
 
   // Turn: 0 = first player and the last one it is the computer.

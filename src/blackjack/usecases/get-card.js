@@ -4,7 +4,7 @@
  * @returns { String } The last card of the deck as a string
  */
 export const getCard = (deck) => {
-  if (deck.length === 0) {
+  if (!deck || deck.length === 0) {
     throw new Error('No hay cartas en el deck');
   }
   return deck.pop();

@@ -1,5 +1,5 @@
-import _ from  'underscore';
-import { createDeck } from './usecases/crear-deck.js'
+import _ from 'underscore';
+import { createDeck } from './usecases/crear-deck.js';
 import { getCard } from './usecases/get-card.js';
 import { cardValue } from './usecases/card-value.js';
 /* eslint-disable no-nested-ternary */
@@ -37,8 +37,10 @@ const myModule = (() => {
       playersPoints.push(0);
     }
 
-    pointsElements.forEach((pointElement) => pointElement.innerText = 0);
-    divPlayersCards.forEach((divPlayerCardElement) => divPlayerCardElement.innerHTML = '');
+    pointsElements.forEach((pointElement) => (pointElement.innerText = 0));
+    divPlayersCards.forEach(
+      (divPlayerCardElement) => (divPlayerCardElement.innerHTML = '')
+    );
 
     stopBtn.disabled = false;
     getCardBtn.disabled = false;
@@ -116,4 +118,3 @@ const myModule = (() => {
     newGame: initGame,
   };
 })();
-

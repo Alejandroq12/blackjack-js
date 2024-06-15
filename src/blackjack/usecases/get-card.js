@@ -1,6 +1,6 @@
 /**
  * This function gets the last card of the deck array
- * @param { Array<string> } deck - An Array of strings with card values
+ * @param { Array<String> } deck - An Array of strings with card values
  * @returns { String } The last card of the deck as a string
  */
 export const getCard = (deck) => {

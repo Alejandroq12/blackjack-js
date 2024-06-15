@@ -2,8 +2,8 @@ import _ from 'underscore';
 
 /**
  * This function creates a new deck.
- * @param { Array<string> } typesOfCards Ejemplo: ['C', 'D', 'H', 'S']
- * @param { Array<string> } especialTypes Ejemplo: ['A', 'J', 'Q', 'K']
+ * @param { Array<String> } typesOfCards Ejemplo: ['C', 'D', 'H', 'S']
+ * @param { Array<String> } especialTypes Ejemplo: ['A', 'J', 'Q', 'K']
  * @returns { Array } It returns a new deck of cards.
  */
 export const createDeck = (typesOfCards, especialTypes) => {

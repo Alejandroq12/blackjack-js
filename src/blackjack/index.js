@@ -1,7 +1,5 @@
 import _ from 'underscore';
-import { createDeck } from './usecases/crear-deck.js';
-import { getCard } from './usecases/get-card.js';
-import { cardValue } from './usecases/card-value.js';
+import { createDeck, getCard, cardValue } from './usecases' 
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-restricted-syntax */
